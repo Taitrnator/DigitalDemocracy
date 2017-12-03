@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
   let colors = ['ff6384', '36a2eb', 'cc65fe', 'ffce56', 'FF56CA', '56FF79']
-  $("#question1, #question2, #question3, #question4").width = $('.chart-container').width();
+  $("#question1, #question2, #question3, #question4, #question5").width = $('.chart-container').width();
 
   $.getJSON("graphdata/DeviceOwnership.json", function(data) {
     var ctx1 = document.getElementById("question1").getContext('2d');
@@ -206,6 +206,59 @@ $(document).ready(function() {
         title: {
             display: true,
             text: 'Percent Change in App Usage between 2010 and 2011'
+        },
+        scales: {
+          yAxes: [
+            {
+              ticks: {
+                beginAtZero: true
+              }
+            }
+          ],
+          xAxes: [
+            {
+              ticks: {
+                autoSkip: false
+              }
+            }
+          ]
+        }
+      }
+    });
+  })
+
+  $.getJSON("graphdata/SubscribersPerYear.json", function(data) {
+    console.log(data);
+    var ctx1 = document.getElementById("question5").getContext('2d');
+    var chart1 = new Chart(ctx1, {
+      type: 'bar',
+      data: {
+        labels: data.QuestionSets,
+        datasets: [
+          {
+            label: "2009",
+            data: data["2009"],
+            backgroundColor: colors[0],
+            borderColor: colors[0]
+          },
+          {
+            label: "2010",
+            data: data["2010"],
+            backgroundColor: colors[1],
+            borderColor: colors[1]
+          },
+          {
+            label: "2011",
+            data: data["2011"],
+            backgroundColor: colors[2],
+            borderColor: colors[2]
+          },
+        ]
+      },
+      options: {
+        title: {
+            display: true,
+            text: 'Total Subscribers Per Year'
         },
         scales: {
           yAxes: [
