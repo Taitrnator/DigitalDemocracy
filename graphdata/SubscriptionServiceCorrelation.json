@@ -1,16 +1,15 @@
 {
   "QuestionSets": [
-    "Pay TV",
-    "Home internet",
-    "Landline telephone",
+    "TV",
+    "Internet",
+    "Land Phone",
     "Mobile voice",
-    "Mobile data plan",
-    "Streaming video service",
-    "Streaming music service",
+    "Mobile data",
+    "Stream video",
+    "Stream music",
     "Gaming",
     "News",
-    "Magazine",
-    "None"
+    "Magazine"
   ],
   "Pay TV": [
     1.000000, 0.266923, 0.255997, 0.171991, 0.085439, -0.022562, 0.003042,
@@ -51,9 +50,5 @@
   "Magazine": [
     0.149744, 0.128667, 0.216853, 0.142764, 0.030673, 0.026250, 0.073825,
     -0.012358, 0.492304, 1.000000, -0.116379
-  ],
-  "None": [
-    -0.255179, -0.447413, -0.171439, -0.206042, -0.166697, -0.127326, -0.071218,
-    -0.080280, -0.100471, -0.116379, 1.000000
   ]
 }

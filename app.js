@@ -454,18 +454,15 @@ $(document).ready(function() {
       }
     ];
     var layout = {
+      width: 800,
+      height: 600,
       title: 'Correlation of Subscription Services',
       xaxis: {
         ticks: '',
-        width: 700,
-        height: 700
       },
       yaxis: {
         ticks: '',
         ticksuffix: ' ',
-        width: 700,
-        height: 700,
-        autosize: false
       },
       font: {
         family: 'Helvetica',
