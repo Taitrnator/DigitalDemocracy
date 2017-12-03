@@ -426,6 +426,98 @@ $(document).ready(function() {
     });
   })
 
+  $.getJSON("graphdata/BingeWatchersPerYear.json", function(data) {
+    var ctx1 = document.getElementById("question8").getContext('2d');
+    var chart1 = new Chart(ctx1, {
+      type: 'bar',
+      data: {
+        labels: data.QuestionSets,
+        datasets: [
+          {
+            label: "Binge Watchers",
+            data: data["Yes"],
+            backgroundColor: colors[1],
+            borderColor: colors[1]
+          }
+        ]
+      },
+      options: {
+        title: {
+          display: true,
+          text: '% Of People Who Binge Watch Per Year, 2009-2011'
+        },
+        scales: {
+          yAxes: [
+            {
+              ticks: {
+                beginAtZero: true
+              },
+              gridLines: {
+                color: 'rgba(255, 255, 255, 0.2)'
+              }
+            }
+          ],
+          xAxes: [
+            {
+              ticks: {
+                autoSkip: false
+              },
+              gridLines: {
+                color: 'rgba(255, 255, 255, 0.2)'
+              }
+            }
+          ]
+        }
+      }
+    });
+  })
+
+  $.getJSON("graphdata/BingeCorrelation.json", function(data) {
+    var ctx1 = document.getElementById("question9").getContext('2d');
+    var chart1 = new Chart(ctx1, {
+      type: 'bar',
+      data: {
+        labels: data.QuestionSets,
+        datasets: [
+          {
+            label: "Correlation",
+            data: data["Binge Correlation"],
+            backgroundColor: colors[0],
+            borderColor: colors[0]
+          }
+        ]
+      },
+      options: {
+        title: {
+          display: true,
+          text: 'Binge Correlation with Subscription Service Types'
+        },
+        scales: {
+          yAxes: [
+            {
+              ticks: {
+                beginAtZero: true
+              },
+              gridLines: {
+                color: 'rgba(255, 255, 255, 0.2)'
+              }
+            }
+          ],
+          xAxes: [
+            {
+              ticks: {
+                autoSkip: false
+              },
+              gridLines: {
+                color: 'rgba(255, 255, 255, 0.2)'
+              }
+            }
+          ]
+        }
+      }
+    });
+  })
+
   $.getJSON("graphdata/SubscriptionServiceCorrelation.json", function(data, err) {
     var q = data.QuestionSets;
     var z = [
@@ -472,7 +564,7 @@ $(document).ready(function() {
       paper_bgcolor: '#1c1f2b',
       plot_bgcolor: '#1c1f2b'
     };
-    Plotly.newPlot('question8', data, layout);
+    Plotly.newPlot('question10', data, layout);
   })
 
 })

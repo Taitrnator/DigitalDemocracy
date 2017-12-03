@@ -1,0 +1,4 @@
+{
+  "QuestionSets": ["Rent DVD","Purchase DVD", "Purchase Digital Video", "Online Streaming", "TV On-Demand"],
+  "Binge Correlation": [0.089841, 0.096413, 0.115057, 0.349174, 0.122151]
+}
