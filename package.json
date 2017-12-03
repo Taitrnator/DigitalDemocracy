@@ -4,6 +4,8 @@
   "description": "Plotting graphs with chartjs for final project in Data Science for Product Management",
   "main": "index.js",
   "scripts": {
+    "deploy": "gh-pages-deploy",
+    "clean-source": "rimraf README.md src webroot package.json",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
