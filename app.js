@@ -1,17 +1,26 @@
 $(document).ready(function() {
 
   let colors = [
-    'ff6384',
-    '36a2eb',
-    'cc65fe',
-    'ffce56',
-    'FF56CA',
-    '56FF79'
-  ]
+    'rgba(255, 67, 110, 0.7)',
+    'rgba(54, 165, 232, 0.7)',
+    'rgba(204, 101, 254, 0.7)',
+    'rgba(255, 206, 86, 0.7)',
+    'rgba(90, 255, 101, 0.7)',
+    'rgba(255, 86, 206, 0.7)'
+  ];
+  let borderColors = [
+    'rgba(255, 67, 110, 1)',
+    'rgba(54, 165, 232, 1)',
+    'rgba(204, 101, 254, 1)',
+    'rgba(255, 206, 86, 1)',
+    'rgba(90, 255, 101, 1)',
+    'rgba(255, 86, 206, 1)'
+  ];
   $("#question1, #question2, #question3, #question4, #question5").width = $('.chart-container').width();
   $.getJSON("graphdata/DeviceOwnership.json", function(data) {
     var ctx1 = document.getElementById("question1").getContext('2d');
     Chart.defaults.global.defaultFontColor = 'rgba(255, 255, 255, 0.6)';
+    Chart.defaults.global.defaultFontSize = 16;
     Chart.defaults.global.defaultColor = 'rgba(255, 255, 255, 0.2)';
 
     var chart1 = new Chart(ctx1, {
@@ -23,27 +32,27 @@ $(document).ready(function() {
             label: "Gen Z",
             data: data["Gen Z"],
             backgroundColor: colors[0],
-            borderColor: colors[0]
+            borderColor: borderColors[0]
           }, {
             label: "Millenial",
             data: data["Millenial"],
             backgroundColor: colors[1],
-            borderColor: colors[1]
+            borderColor: borderColors[1]
           }, {
             label: "Gen X",
             data: data["Gen X"],
             backgroundColor: colors[2],
-            borderColor: colors[2]
+            borderColor: borderColors[2]
           }, {
             label: "Baby Boomer",
             data: data["Baby Boomer"],
             backgroundColor: colors[3],
-            borderColor: colors[3]
+            borderColor: borderColors[3]
           }, {
             label: "Mature",
             data: data["Mature"],
-            backgroundColor: colors[5],
-            borderColor: colors[5]
+            backgroundColor: colors[4],
+            borderColor: borderColors[4]
           }
         ]
       },
@@ -84,27 +93,27 @@ $(document).ready(function() {
             label: "Less than $29,999",
             data: data["Less than $29,999"],
             backgroundColor: colors[0],
-            borderColor: colors[0]
+            borderColor: borderColors[0]
           }, {
             label: "$30,000 to $49,999",
             data: data["$30,000 to $49,999"],
             backgroundColor: colors[1],
-            borderColor: colors[1]
+            borderColor: borderColors[1]
           }, {
             label: "$50,000 to $99,999",
             data: data["$50,000 to $99,999"],
             backgroundColor: colors[2],
-            borderColor: colors[2]
+            borderColor: borderColors[2]
           }, {
             label: "$100,000 to $299,999",
             data: data["$100,000 to $299,999"],
             backgroundColor: colors[3],
-            borderColor: colors[3]
+            borderColor: borderColors[3]
           }, {
             label: "More than $300,000",
             data: data["More than $300,000"],
             backgroundColor: colors[5],
-            borderColor: colors[5]
+            borderColor: borderColors[5]
           }
         ]
       },
@@ -147,17 +156,17 @@ $(document).ready(function() {
             label: "2009",
             data: data["2009"],
             backgroundColor: colors[0],
-            borderColor: colors[0]
+            borderColor: borderColors[0]
           }, {
             label: "2010",
             data: data["2010"],
             backgroundColor: colors[1],
-            borderColor: colors[1]
+            borderColor: borderColors[1]
           }, {
             label: "2011",
             data: data["2011"],
             backgroundColor: colors[2],
-            borderColor: colors[2]
+            borderColor: borderColors[2]
           }
         ]
       },
@@ -203,22 +212,22 @@ $(document).ready(function() {
             label: "Gen Z",
             data: data["Gen Z"],
             backgroundColor: colors[0],
-            borderColor: colors[0]
+            borderColor: borderColors[0]
           }, {
             label: "Millenial",
             data: data["Millenial"],
             backgroundColor: colors[1],
-            borderColor: colors[1]
+            borderColor: borderColors[1]
           }, {
             label: "Gen X",
             data: data["Gen X"],
             backgroundColor: colors[2],
-            borderColor: colors[2]
+            borderColor: borderColors[2]
           }, {
             label: "Baby Boomer",
             data: data["Baby Boomer"],
             backgroundColor: colors[3],
-            borderColor: colors[3]
+            borderColor: borderColors[3]
           }
         ]
       },
@@ -264,17 +273,17 @@ $(document).ready(function() {
             label: "2009",
             data: data["2009"],
             backgroundColor: colors[0],
-            borderColor: colors[0]
+            borderColor: borderColors[0]
           }, {
             label: "2010",
             data: data["2010"],
             backgroundColor: colors[1],
-            borderColor: colors[1]
+            borderColor: borderColors[1]
           }, {
             label: "2011",
             data: data["2011"],
             backgroundColor: colors[2],
-            borderColor: colors[2]
+            borderColor: borderColors[2]
           }
         ]
       },
@@ -320,12 +329,12 @@ $(document).ready(function() {
             label: "Yes",
             data: data["Yes"],
             backgroundColor: colors[0],
-            borderColor: colors[0]
+            borderColor: borderColors[0]
           }, {
             label: "No",
             data: data["No"],
             backgroundColor: colors[1],
-            borderColor: colors[1]
+            borderColor: borderColors[1]
           }
         ]
       },
@@ -371,27 +380,27 @@ $(document).ready(function() {
             label: "Nothing extra",
             data: data["Nothing extra"],
             backgroundColor: colors[0],
-            borderColor: colors[0]
+            borderColor: borderColors[0]
           }, {
             label: "$5",
             data: data["$5"],
             backgroundColor: colors[1],
-            borderColor: colors[1]
+            borderColor: borderColors[1]
           }, {
             label: "$10",
             data: data["$10"],
             backgroundColor: colors[2],
-            borderColor: colors[2]
+            borderColor: borderColors[2]
           }, {
             label: "$20",
             data: data["$20"],
             backgroundColor: colors[3],
-            borderColor: colors[3]
+            borderColor: borderColors[3]
           }, {
             label: "$30",
             data: data["$30"],
             backgroundColor: colors[4],
-            borderColor: colors[4]
+            borderColor: borderColors[4]
           }
         ]
       },
@@ -437,7 +446,7 @@ $(document).ready(function() {
             label: "Binge Watchers",
             data: data["Yes"],
             backgroundColor: colors[1],
-            borderColor: colors[1]
+            borderColor: borderColors[1]
           }
         ]
       },
@@ -483,7 +492,7 @@ $(document).ready(function() {
             label: "Correlation",
             data: data["Binge Correlation"],
             backgroundColor: colors[0],
-            borderColor: colors[0]
+            borderColor: borderColors[0]
           }
         ]
       },
@@ -533,8 +542,8 @@ $(document).ready(function() {
       data["Magazine"]
     ];
     var colorscaleValue = [
-      [0, colors[0]],
-      [1, colors[1]]
+      [0, borderColors[0]],
+      [1, borderColors[1]]
     ];
     var data = [
       {
@@ -548,7 +557,6 @@ $(document).ready(function() {
     var layout = {
       width: 800,
       height: 600,
-      title: 'Correlation of Subscription Services',
       xaxis: {
         ticks: '',
       },

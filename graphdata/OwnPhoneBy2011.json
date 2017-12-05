@@ -1,5 +1,5 @@
 {
-  "QuestionSets": ["HasBasicPhone", "HasSmartPhone", "HasTablet"],
+  "QuestionSets": ["Basic Phone", "Smartphone", "Tablet"],
   "Less than $29,999": [28.0374, 60.5140, 37.8505],
   "$30,000 to $49,999": [21.5881, 71.7122, 49.8759],
   "$50,000 to $99,999": [24.5640, 70.4942, 58.2849],
